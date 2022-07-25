@@ -22,7 +22,7 @@ public class CtlEleccion {
     
     public ClsMensaje agregarEleccion(ClsEleccion eleccion) {
         
-        return this.modelo.agregarCandidato(eleccion);
+        return this.modelo.agregarEleccion(eleccion);
     }
    
     
