@@ -8,6 +8,15 @@ package Clases;
  *
  * @author davidperezarias
  */
-public class ClsVotante {
+public class ClsVotante extends ClsPersona {
+
+    public ClsVotante(String numeroCedula, String nombre, String correo, String telefono, String ciudadOrigen, String direccion) {
+        super(numeroCedula, nombre, correo, telefono, ciudadOrigen, direccion);
+    }
     
-}
+    
+
+    
+    }
+
+  
