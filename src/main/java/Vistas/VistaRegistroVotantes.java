@@ -106,7 +106,7 @@ public class VistaRegistroVotantes extends javax.swing.JFrame {
         botonActualizar.setBackground(new java.awt.Color(204, 204, 255));
         botonActualizar.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         botonActualizar.setForeground(new java.awt.Color(0, 51, 102));
-        botonActualizar.setText("Actulizar");
+        botonActualizar.setText("Actualizar");
         botonActualizar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         botonActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

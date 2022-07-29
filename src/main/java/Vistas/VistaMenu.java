@@ -11,6 +11,8 @@ package Vistas;
 public class VistaMenu extends javax.swing.JFrame {
 
     VistaGestorCandidato vistaCandidato;
+    VistaRegistroVotantes vistaVotante;
+ 
     
     /**
      * Creates new form VistaMenu
@@ -19,6 +21,8 @@ public class VistaMenu extends javax.swing.JFrame {
         initComponents();
         
         this.vistaCandidato = new VistaGestorCandidato(this);
+        this.vistaVotante = new VistaRegistroVotantes(this);
+    
     }
 
     /**
@@ -33,12 +37,11 @@ public class VistaMenu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         botonGestorCandidato = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        Votante = new javax.swing.JButton();
+        Eleccion = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(500, 328));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -65,21 +68,31 @@ public class VistaMenu extends javax.swing.JFrame {
         jPanel1.add(botonGestorCandidato);
         botonGestorCandidato.setBounds(40, 90, 170, 47);
 
-        jButton2.setBackground(new java.awt.Color(153, 153, 255));
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Registro votante");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jButton2);
-        jButton2.setBounds(40, 160, 170, 47);
+        Votante.setBackground(new java.awt.Color(153, 153, 255));
+        Votante.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        Votante.setForeground(new java.awt.Color(255, 255, 255));
+        Votante.setText("Registro votante");
+        Votante.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Votante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VotanteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Votante);
+        Votante.setBounds(40, 160, 170, 47);
 
-        jButton3.setBackground(new java.awt.Color(153, 153, 255));
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Votar");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jButton3);
-        jButton3.setBounds(40, 230, 180, 45);
+        Eleccion.setBackground(new java.awt.Color(153, 153, 255));
+        Eleccion.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        Eleccion.setForeground(new java.awt.Color(255, 255, 255));
+        Eleccion.setText("Gestor Eleccion");
+        Eleccion.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Eleccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EleccionActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Eleccion);
+        Eleccion.setBounds(40, 230, 180, 45);
 
         Fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\ferna\\Documents\\NetBeansProjects\\elecciones-g8-main\\src\\main\\java\\Capturas\\menu.jpg")); // NOI18N
         Fondo.setText("jLabel2");
@@ -98,6 +111,15 @@ public class VistaMenu extends javax.swing.JFrame {
         this.vistaCandidato.setVisible(true);
         
     }//GEN-LAST:event_botonGestorCandidatoActionPerformed
+
+    private void VotanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VotanteActionPerformed
+        this.setVisible(false);
+        this.vistaVotante.setVisible(true);
+    }//GEN-LAST:event_VotanteActionPerformed
+
+    private void EleccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EleccionActionPerformed
+     
+    }//GEN-LAST:event_EleccionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,10 +157,10 @@ public class VistaMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Eleccion;
     private javax.swing.JLabel Fondo;
+    private javax.swing.JButton Votante;
     private javax.swing.JButton botonGestorCandidato;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

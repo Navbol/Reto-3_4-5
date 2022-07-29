@@ -104,8 +104,8 @@ public class MdlVotante {
             sentencia.setString(2, votante.getCorreo());
             sentencia.setString(3, votante.getTelefono());
             sentencia.setString(4, votante.getDireccion());
-            sentencia.setString(8, votante.getCiudadOrigen());
-            sentencia.setString(9, votante.getNumeroCedula());
+            sentencia.setString(5, votante.getCiudadOrigen());
+            sentencia.setString(6, votante.getNumeroCedula());
 
             int resultado = sentencia.executeUpdate();
 
